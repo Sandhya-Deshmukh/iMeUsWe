@@ -1,0 +1,25 @@
+{
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    }
+  },
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "cwd": "babelrc",
+        "root": ["./src"],
+        "extensions": [".js", ".ios.js", ".android.js"],
+
+        "alias": {
+          "_rootNavigation": "./src/rootNavigation",
+          "_components": "./src/components",
+          "_api": "./src/api",
+          "_screens": "./src/screens",
+          "_assets": "./assets"
+        }
+      }
+    ]
+  ]
+}
